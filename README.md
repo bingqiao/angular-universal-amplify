@@ -1,4 +1,4 @@
-# Angular Universal Amplify
+# Angular Universal with Cognito via Amplify
 
 Angular Universal App deployed to AWS Lambda with Authentication against AWS Cognito via Amplify.
 
@@ -23,3 +23,15 @@ Edit `src/app/service/aws-config.ts` with correct values from your AWS configura
 ## Deploy
 
 Run `build:serverless:deploy`
+
+## Trubleshooting
+
+A few things to check if authentication or auth request doesn't work
+
+* Identity Pool needs to be in the same region as the API
+* Identity Pool needs Invoke privilege for the API
+* App Client much have a Provider created in Identity pool
+* API key must be added to Usage Plan if there is one
+
+CORS error could happen if above is not setup correctly.
+

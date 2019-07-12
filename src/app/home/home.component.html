@@ -1,16 +1,16 @@
 <div class="container">
     <div>
-        <a *ngIf="!authenticated" class="navbar-item" href="{{signInUrl}}">
+        <a *ngIf="!authenticated" href="{{signInUrl}}">
             SignIn
         </a>
     </div>
-    <button *ngIf="authenticated" class="navbar-item" (click)="signOut()">
+    <button *ngIf="authenticated" (click)="signOut()">
         SignOut
     </button>
-    <button class="navbar-item" (click)="callNoAuth()">
+    <button (click)="callNoAuth()">
         Call noAuth
     </button>
-    <button class="navbar-item" (click)="callAuth()">
+    <button (click)="callAuth()">
         Call auth
     </button>
     <div>
