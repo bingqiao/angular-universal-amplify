@@ -8,6 +8,21 @@ import {provideModuleMap} from '@nguniversal/module-map-ngfactory-loader';
 import * as express from 'express';
 import {join} from 'path';
 
+// start of fixing window not defined
+const domino = require("domino");
+const fs = require("fs");
+const path = require("path");
+const templateA = fs
+  .readFileSync(path.join("dist/browser", "index.html"))
+  .toString();
+const win = domino.createWindow(templateA);
+win.Object = Object;
+win.Math = Math;
+
+global["window"] = win;
+global["document"] = win.document;
+// end of fixing window not defined
+
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
