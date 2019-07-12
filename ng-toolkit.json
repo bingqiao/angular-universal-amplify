@@ -15,5 +15,16 @@
     "skipServer": false,
     "skipUniversal": false,
     "webpack": true
+  },
+  "serverless": {
+    "project": "angular-universal-amplify",
+    "provider": "aws",
+    "skipInstall": false,
+    "directory": ".",
+    "clientProject": "angular-universal-amplify",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
   }
 }
