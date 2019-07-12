@@ -1,10 +1,10 @@
-# AngularUniversalAmplify
+# Angular Universal Amplify
 
 Angular Universal App deployed to AWS Lambda with Authentication against AWS Cognito via Amplify.
 
 This project is inspired by [How to secure Microservices on AWS with Cognito, API Gateway, and Lambda](https://www.freecodecamp.org/news/how-to-secure-microservices-on-aws-with-cognito-api-gateway-and-lambda-4bfaa7a6583c/) which has a react frontend and Lambda function deployed via Claudia.js.
 
-This is only the frontend app. Please refer to the aformentioned article on how to implement the backend API that can be consumed by this project.
+This is only the frontend app. Please refer to the aforementioned article on how to implement the backend API that can be consumed by this project.
 
 ## Setup
 
